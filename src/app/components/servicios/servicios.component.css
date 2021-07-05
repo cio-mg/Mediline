@@ -1,0 +1,59 @@
+#pruebas {
+    margin-top: 150px;
+}
+
+img {
+    float: left;
+}
+
+.step-border {
+    position: relative;
+}
+
+.card-body {
+    background: #e8eeff;
+}
+
+.cardd-body {
+    background: #fff;
+}
+
+.card-border {
+    border: solid 10px white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+
+.card-border:hover {
+    transform: scale(1.05);
+}
+
+.step-border::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -8%;
+    left: 20%;
+    border-radius: 2px;
+    transition: all 500 ms ease;
+}
+
+.step-border:hover::after {
+    left: 0%;
+    width: 20%;
+}
+
+.inner {
+    overflow: hidden;
+}
+
+.inner img {
+    transition: all 1.5s ease;
+}
+
+.inner:hover img {
+    transform: scale(1.5);
+}

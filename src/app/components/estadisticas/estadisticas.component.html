@@ -1,0 +1,18 @@
+<div class="row"></div>
+<section id="estadisticas">
+    <div class="container">
+        <div class="row ">
+            <h3 class="text-center pb-5 pt-2 h2 fw-bold"> Estadísticas</h3>
+        </div>
+    </div>
+</section>
+
+
+<div class="row" style="justify-content: space-between;">
+    <div class="col-2" *ngFor="let item of coviMapData">
+        <p>Confirmados {{ item.confirmed }} </p>
+        <p>Fallecidos {{ item.deaths }} </p>
+        <p>Recuperados {{ item.recovered }} </p>
+        <p>Region {{ item.countryregion }} </p>
+    </div>
+</div>

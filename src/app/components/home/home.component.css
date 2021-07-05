@@ -1,0 +1,136 @@
+img {
+    float: left;
+}
+
+.content {
+    max-width: 700px;
+}
+
+.card-border {
+    border: solid 8px white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+
+.card-border:hover {
+    transform: scale(1.05);
+}
+
+#sintomas {
+    height: 880px;
+}
+
+#intro {
+    height: 700px;
+}
+
+#info {
+    height: 585px;
+}
+
+#pruebas {
+    height: 250px;
+}
+
+.step-border {
+    position: relative;
+}
+
+.step-border::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -8%;
+    left: 20%;
+    border-radius: 2px;
+    transition: all 500 ms ease;
+}
+
+.step-border:hover::after {
+    left: 0%;
+    width: 20%;
+}
+
+.stepp-border {
+    position: relative;
+    margin-top: 20%;
+    text-align: center;
+}
+
+.stepp-border::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    border-radius: 10px;
+    transition: all 500 ms ease;
+}
+
+.stepp-border:hover::after {
+    left: 40%;
+    width: 20%;
+}
+
+.conteinernotice {
+    margin-top: 2%;
+}
+
+.inner {
+    overflow: hidden;
+}
+
+.inner img {
+    transition: all 1.5s ease;
+}
+
+.inner:hover img {
+    transform: scale(1.5);
+}
+
+.card-body {
+    background: #e8eeff;
+}
+
+.card-border {
+    border: solid 10px white;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all ease-out 0.2s;
+}
+
+
+/*.step-border::after {
+    left: 0%;
+    width: 100%;
+}*/
+
+
+/*#d-flex {
+    height: 700px;
+}*/
+
+
+/*#bg-borde {
+    position: relative;
+    top: -130px;
+}
+
+#borde {
+    min-height: 500px;
+    position: relative;
+}*/
+
+
+/*#sintomas {
+    background: rgb(255, 255, 255);
+    background: url(assets/img/fondo.png);
+    background-repeat: repeat-x;
+    background-size: auto;
+    margin: -20px; 
+}*/

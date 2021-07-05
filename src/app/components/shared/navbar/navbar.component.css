@@ -1,0 +1,22 @@
+.navbar {
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    color: black;
+    font-family: 'Poppins';
+    min-height: 90px;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        background-color: transparent!important;
+        font-family: 'Poppins';
+        color: black;
+    }
+}
+
+.navg a:hover {
+    color: #fafafa;
+    background-color: #458FF6;
+    font-family: 'Poppins';
+}
