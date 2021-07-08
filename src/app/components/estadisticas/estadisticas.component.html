@@ -1,18 +1,52 @@
-<div class="row"></div>
-<section id="estadisticas">
-    <div class="container">
-        <div class="row ">
-            <h3 class="text-center pb-5 pt-2 h2 fw-bold"> Estadísticas</h3>
-        </div>
+<body background="assets/img/estafondo.png ">
+    <div class="row">
+        <section id="estadisticas">
+            <div class="row ">
+                <h3 class="text-center pb-4 pt-2 h2 fw-bold"> Mapa de casos COVID-19</h3>
+            </div>
+        </section>
     </div>
-</section>
+    <div class="mapa">
+        <agm-map (mapClick)="agregar($event)" [latitude]="lat" [longitude]="lng" [zoom]="3">
+            <agm-marker [iconUrl]="iconMap.iconUrl" *ngFor="let CovidInfoModel of coviMapData" [latitude]="CovidInfoModel.location.lat" [longitude]="CovidInfoModel.location.lng">
+                <agm-info-window>
+                    <strong>{{CovidInfoModel .provincestate}} - {{CovidInfoModel .countryregion}}</strong>
+                    <p></p>
+                    <p>Confirmados: {{CovidInfoModel .confirmed }}</p>
+                    <p>Fallecidos:{{ CovidInfoModel.deaths }}</p>
+                    <p>Recuperados: {{ CovidInfoModel.recovered }}</p>
+                </agm-info-window>
+            </agm-marker>
+        </agm-map>
+    </div>
+    <br>
+    <br>
+    <section>
+        <div class="container">
+            <div class="text-light  text-center p-5 rounden">
 
 
-<div class="row" style="justify-content: space-between;">
+                <p> Mediline © 2021 | Todos los Derechos Reservados | Aviso de privacidad | Términos y condiciones
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+<!-- 
+    <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker *ngFor="let item of covidMapData" [latitude]="{{ covidMapData .location[lat] }}" [longitude]="{{item.location.[lng]}}">
+            <agm-info-window>
+    
+            </agm-info-window>
+        </agm-marker>
+    </agm-map>
+ -->
+
+<!-- <div class="row" style="justify-content: space-between;">
     <div class="col-2" *ngFor="let item of coviMapData">
         <p>Confirmados {{ item.confirmed }} </p>
         <p>Fallecidos {{ item.deaths }} </p>
         <p>Recuperados {{ item.recovered }} </p>
         <p>Region {{ item.countryregion }} </p>
     </div>
-</div>
+</div> -->

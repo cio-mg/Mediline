@@ -10,6 +10,8 @@ import { CentrosmComponent } from './components/centrosm/centrosm.component';
 import { PreguntasfComponent } from './components/preguntasf/preguntasf.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCgjm2ESIbG95kPuuBy2p6-SuFXXOF5wgI'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

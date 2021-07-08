@@ -21,5 +21,7 @@ import { Observable } from 'rxjs';
       }
       return this.http.get(`${endpoint}`, { params: httpParams });
     }
+
+
   }
   

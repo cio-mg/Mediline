@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-servicios',
@@ -43,5 +44,8 @@ this.form=this.formBuilder.group({
 Guardar(){
 console.log(this.form.value);
 this.form.reset();
+Swal.fire(
+  '¡Cita exitosa!','Favor de llegar 5 minutos antes','success'
+)
 }
 }
